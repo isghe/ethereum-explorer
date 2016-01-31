@@ -20,9 +20,23 @@ public class EthereumExplorer {
 
     public EthereumExplorer(String[] args) throws Throwable {
         System.out.println("Ethereum explorer");
-        Args arg = new Args("h*,p*,t,b,i,f,a*,k*", args);
+        Args arg = new Args("h*,p*,t,b,i,f,a*,k*,m", args);
         Params params = new Params(arg.getString('a'), arg.getString('k'), arg.getBoolean('t'), arg.getBoolean('b')
-                , arg.getBoolean('i'), arg.getBoolean('f'), arg.getString('h'), arg.getString('p'));
+                , arg.getBoolean('i'), arg.getBoolean('f'), arg.getString('h'), arg.getString('p'), arg.getBoolean('m'));
+
+        if (params.isManual()) {
+            System.out.println("Usage: java it.databiz.ethereum.EthereumExplorer [-options]");
+            System.out.println("where options include:");
+            System.out.println("    -a      select an Ethereum address");
+            System.out.println("    -b      shows a balance for an address");
+            System.out.println("    -h      select a host URL (ex. \'http://localhost\')");
+            System.out.println("    -i      shows block info");
+            System.out.println("    -m      print this help message");
+            System.out.println("    -f      shows full transaction for an address");
+            System.out.println("    -p      select a port for selected host (RPC eanbled)");
+
+            System.exit(0);
+        }
 
         JsonRpcHttpClient client = new JsonRpcHttpClient(new URL(params.getHost() + ":" + params.getPort()));
 

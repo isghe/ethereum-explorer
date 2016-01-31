@@ -12,9 +12,10 @@ public class Params {
     private String blockNumber;
     private String host;
     private String port;
+    private boolean manual;
 
     public Params(final String fromAddress, final String blockNumber, final boolean transaction, final boolean balance,
-                  final boolean infos, final boolean allInfos, final String host, final String port) {
+                  final boolean infos, final boolean allInfos, final String host, final String port, final boolean manual) {
         this.fromAddress = fromAddress;
         this.blockNumber = blockNumber;
         this.balance = balance;
@@ -23,6 +24,7 @@ public class Params {
         this.allInfos = allInfos;
         this.host = host;
         this.port = port;
+        this.manual = manual;
     }
 
     public String getFromAddress() {
@@ -87,6 +89,14 @@ public class Params {
 
     public void setHost(String host) {
         this.host = host;
+    }
+
+    public boolean isManual() {
+        return manual;
+    }
+
+    public void setManual(boolean manual) {
+        this.manual = manual;
     }
 
     @Override
