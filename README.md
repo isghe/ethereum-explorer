@@ -1,6 +1,24 @@
 # ethereum-explorer
 Simple (very very pre-alpha version) command line Ethereum blockchain explorer
 
+Usage (manual invoke):
+```{r, engine='bash', count_lines}
+java it.databiz.ethereum.EthereumExplorer -m
+```
+
+```{r, engine='bash', count_lines}
+Ethereum explorer
+Usage: java it.databiz.ethereum.EthereumExplorer [-options]
+where options include:
+    -a      select an Ethereum address
+    -b      shows a balance for an address
+    -h      select a host URL (ex. 'http://localhost')
+    -i      shows block info
+    -m      print this help message
+    -f      shows full transaction for an address
+    -p      select a port for selected host (RPC eanbled)
+```
+
 Invoke command example:
 ```{r, engine='bash', count_lines}
 java it.databiz.ethereum.EthereumExplorer -h http://localhost -p 8008 -a 0x7122cf4bc0a0db413f6f9e3b3427f461f6f26da8 -f
