@@ -1,0 +1,3 @@
+$ mvn install:install-file -Dfile=text-table-formatter-1.1.2.jar -DgroupId=org.nocrala.tools -DartifactId=texttablefmt -Dversion=1.1.2 -Dpackaging=jar
+$ mvn install:install-file -Dfile=args.jar -DgroupId=com.cleancoder -DartifactId=args -Dversion=1.0 -Dpackaging=jar
+
