@@ -1,0 +1,10 @@
+java -classpath /Users/isghe/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.jar:\
+/Users/isghe/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.5.2/jackson-databind-2.5.2.jar:\
+/Users/isghe/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.5.2/jackson-core-2.5.2.jar:\
+/Users/isghe/.m2/repository/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.2.0/jsonrpc4j-1.2.0.jar:\
+/Users/isghe/.m2/repository/org/nocrala/tools/texttablefmt/1.1.2/texttablefmt-1.1.2.jar:\
+/Users/isghe/.m2/repository/com/cleancoder/args/1.0/args-1.0.jar:\
+/Users/isghe/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:\
+/Users/isghe/.m2/repository/it/databiz/ethereum-explorer/1.0-SNAPSHOT/ethereum-explorer-1.0-SNAPSHOT.jar it.databiz.ethereum.EthereumExplorer \
+-h http://192.168.56.101 -p 8545 \
+-f
